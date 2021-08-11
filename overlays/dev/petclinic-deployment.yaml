@@ -37,7 +37,7 @@ spec:
         deploymentconfig: petclinic-app
     spec:
       containers:
-      - image: image-registry.openshift-image-registry.svc:5000/petclinic-dev/petclinic-app
+      - image: image-registry.openshift-image-registry.svc:5000/petclinic-dev/petclinic-app:latest
         imagePullPolicy: Always
         name: petclinic-app
         ports:
