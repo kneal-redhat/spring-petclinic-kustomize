@@ -1,4 +1,4 @@
-# Pragmatic GitOps: Part 1 - Kustomize
+# GitOps: Part 1 - Kustomize
 
 ## Introduction
 
@@ -7,7 +7,7 @@ There is also the final "base" and "overlays" directories, so you can see what t
 
 ## Deploying the "petclinic-demo" Project
 
-Login to your OpenShift cluster (4.5+) with the `oc` command line tool and run the following:
+Login to your OpenShift cluster (4.6+) with the `oc` command line tool and run the following:
 
 ```
 $ git clone https://github.com/kneal-redhat/spring-petclinic-kustomize.git
