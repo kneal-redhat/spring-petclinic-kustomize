@@ -37,7 +37,7 @@ spec:
         deploymentconfig: petclinic
     spec:
       containers:
-      - image: image-registry.openshift-image-registry.svc:5000/petclinic-prod/petclinic:prod-2021-08-18-17-10-12
+      - image: quay.io/kneal/petclinic:prod-2021-08-18-17-10-12
         imagePullPolicy: Always
         name: petclinic
         ports:
