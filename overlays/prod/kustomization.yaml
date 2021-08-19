@@ -9,6 +9,4 @@ resources:
   - namespace.yaml
   - petclinic-deployment.yaml
 
-images:
-  - name: image-registry.openshift-image-registry.svc:5000/petclinic-prod/petclinic-app
-    newTag: petclinic-prod
+
