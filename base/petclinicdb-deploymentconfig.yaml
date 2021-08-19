@@ -97,5 +97,4 @@ spec:
       from:
         kind: ImageStreamTag
         name: mysql:8.0
-        namespace: openshift
     type: ImageChange

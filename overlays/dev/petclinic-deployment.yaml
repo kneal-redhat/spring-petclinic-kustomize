@@ -6,24 +6,24 @@ metadata:
     app.openshift.io/vcs-ref: ""
     app.openshift.io/vcs-uri: https://github.com/kneal-redhat/spring-petclinic
     deployment.kubernetes.io/revision: "2"
-    image.openshift.io/triggers: '[{"from":{"kind":"ImageStreamTag","name":"petclinic-app:latest","namespace":"petclinic-dev"},"fieldPath":"spec.template.spec.containers[?(@.name==\"petclinic-app\")].image","pause":"false"}]'
+    image.openshift.io/triggers: '[{"from":{"kind":"ImageStreamTag","name":"petclinic:latest","namespace":"petclinic-dev"},"fieldPath":"spec.template.spec.containers[?(@.name==\"petclinic\")].image","pause":"false"}]'
     openshift.io/generated-by: OpenShiftWebConsole
   labels:
-    app: petclinic-app
-    app.kubernetes.io/component: petclinic-app
-    app.kubernetes.io/instance: petclinic-app
-    app.kubernetes.io/name: petclinic-app
+    app: petclinic
+    app.kubernetes.io/component: petclinic
+    app.kubernetes.io/instance: petclinic
+    app.kubernetes.io/name: petclinic
     app.kubernetes.io/part-of: petclinic
     app.openshift.io/runtime: java
     app.openshift.io/runtime-version: openjdk-11-el7
-  name: petclinic-app
+  name: petclinic
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      app: petclinic-app
+      app: petclinic
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -33,13 +33,13 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
-        app: petclinic-app
-        deploymentconfig: petclinic-app
+        app: petclinic
+        deploymentconfig: petclinic
     spec:
       containers:
-      - image: image-registry.openshift-image-registry.svc:5000/petclinic-dev/petclinic-app:latest
+      - image: image-registry.openshift-image-registry.svc:5000/petclinic-dev/petclinic:dev-2021-08-18-03-00-37
         imagePullPolicy: Always
-        name: petclinic-app
+        name: petclinic
         ports:
         - containerPort: 8080
           protocol: TCP
